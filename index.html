@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Text Editor</title>
+</head>
+<body>
+
+<div class="editor-container">
+    <div class="toolbar">
+        <label for="text-input">Text:</label>
+        <textarea id="text-input" rows="4" cols="50"></textarea>
+
+        <label for="font-style">Font Style:</label>
+        <select id="font-style">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Tahoma">Tahoma</option>
+            <!-- Add more font options as needed -->
+        </select>
+
+        <label for="font-size">Font Size:</label>
+        <select id="font-size">
+            <option value="12px">12px</option>
+            <option value="16px">16px</option>
+            <option value="20px">20px</option>
+            <!-- Add more size options as needed -->
+        </select>
+
+        <label for="font-color">Font Color:</label>
+        <input type="color" id="font-color">
+
+        <button onclick="applyChanges()">Apply Changes</button>
+    </div>
+
+    <div class="text-display" id="text-display" draggable="true" ondragstart="drag(event)"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
